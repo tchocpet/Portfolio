@@ -1,0 +1,273 @@
+.app-toolbar {
+  /* make background configurable; default transparent */
+  background: var(--app-toolbar-bg, transparent) !important;
+  color: var(--app-toolbar-color, #ffffff);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 92px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toolbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 0 5rem;
+  position: relative;
+
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #E15544;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+  height: 44px;
+  width: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logo:hover {
+  color: #E15544;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex: 1;
+  justify-content: left;
+  margin-left: 2rem;
+
+  &--desktop {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+button{
+  color: #E15544;
+}
+
+.nav a {
+  color: #E15544;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #02F4BF;
+  }
+}
+
+.language-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.lang-btn {
+  color: #E15544 !important;
+  font-weight: 700;
+  font-size: 0.9rem;
+
+  &:hover {
+    color: #02F4BF !important;
+  }
+}
+
+.mat-mdc-button:not(:disabled) {
+  color: #E15544;
+}
+
+.lang-option {
+  min-width: 44px;
+  height: 36px;
+  padding: 0 8px;
+  color: #E15544;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.lang-option:hover {
+  color: #02F4BF;
+}
+
+.lang-option.active {
+  color: #02F4BF;
+}
+
+.sep {
+  color: #E15544;
+  user-select: none;
+  padding: 0 6px;
+  font-weight: 700;
+}
+
+/* Hamburger menu (mobile only) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  gap: 5px;
+  margin-left: auto;
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+
+  span {
+    width: 24px;
+    height: 3px;
+    background: #E15544;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  &.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+
+  &.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  &.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+}
+
+/* Mobile menu drawer */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 92px;
+  left: 0;
+  right: 0;
+  background: rgba(11, 4, 45, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  padding: 2rem 1rem;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-height: calc(100vh - 92px);
+  overflow-y: auto;
+  border-bottom: 1px solid rgba(0, 242, 208, 0.2);
+
+  &.open {
+    display: flex;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #E15544;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #02F4BF;
+  }
+}
+
+.mobile-nav-item {
+  color: #E15544;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.75rem 0;
+  transition: color 0.3s ease;
+  border-bottom: 1px solid rgba(0, 242, 208, 0.1);
+
+  &:hover {
+    color: #02F4BF;
+  }
+}
+
+.mobile-lang-toggle {
+  display: none;
+  flex-direction: row;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 242, 208, 0.2);
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+
+  button {
+    background: none;
+    border: none;
+    color: #E15544;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #02F4BF;
+    }
+
+    &.active {
+      color: #02F4BF;
+    }
+  }
+
+  span {
+    color: #E15544;
+    font-weight: 700;
+  }
+}
+
+/* Mobile-specific fixes: avoid horizontal overflow from centered toolbar and ensure menu sits under header */
+@media (max-width: 768px) {
+  .app-toolbar {
+    left: 0;
+    transform: none;
+    width: 100%;
+  }
+
+  .mobile-menu {
+    top: var(--app-header-height, 92px);
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  .hamburger {
+    /* larger hit area on mobile */
+    padding: 10px;
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "nav": {
+    "whyMe": "Über mich",
+    "skills": "Fähigkeiten",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "FRONTEND ENTWICKLER",
+    "name": "Thierno Diallo "
+  },
+  "about": {
+    "heading": "Über mich",
+    "description": "Beschreiben Sie einige IT-bezogene Informationen über sich. Warum begeistert Sie das Programmieren? Beschreiben Sie Ihre Motivation für berufliche Weiterentwicklung und kontinuierliches Lernen. Betonen Sie Ihre ausgeprägten Problemlösungsfähigkeiten und Ihre Leidenschaft für das Programmieren."
+  },
+  "skills": {
+    "heading": "Meine Fähigkeiten"
+  },
+  "projects": {
+    "heading": "Meine Projekte",
+    "projectA": {
+      "title": "Projekt A",
+      "description": "Kurzbeschreibung"
+    },
+    "projectB": {
+      "title": "Projekt B",
+      "description": "Kurzbeschreibung"
+    },
+    "project_1": {
+      "title": "Join",
+      "description": "Aufgabenmanager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag & Drop, weisen Sie Benutzer und Kategorien zu."
+    },
+    "project_2": {
+      "title": "Zeitplaner",
+      "description": "Aufgabenmanager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag & Drop, weisen Sie Benutzer und Kategorien zu."
+    },
+    "project_3": {
+      "title": "Pollo Loco",
+      "description": "Jump-, Run- und Wurfspiel basierend auf einem objektorientierten Ansatz. Helfen Sie Pepe, Münzen und Tabasco zu finden und die verrückte Henne zu besiegen."
+    }
+  },
+  "contact": {
+    "heading": "Kontakt",
+    "name": "Name",
+    "email": "E-Mail",
+    "message": "Nachricht",
+    "send": "Senden",
+    "sending": "Senden...",
+    "placeholder": {
+      "name": "Ihr Name",
+      "email": "Ihre E-Mail",
+      "message": "Ihre Nachricht"
+    },
+    "privacyText": "Ich habe die <a href=\"#\">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "privacyPrefix": "Ich habe die",
+    "privacySuffix": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "errors": {
+      "nameRequired": "Ihr Name ist erforderlich",
+      "emailRequired": "Ihre E-Mail ist erforderlich",
+      "messageRequired": "Ihre Nachricht ist erforderlich"
+    },
+    "success": "Nachricht gesendet — danke!",
+    "failure": "Senden der Nachricht fehlgeschlagen. Bitte versuchen Sie es später erneut.",
+    "description": "Ermutigen Sie Personen, Sie zu kontaktieren, und beschreiben Sie, für welche Rolle Sie sich interessieren. Bekunden Sie Ihr Interesse, zu einem neuen Projekt beizutragen.",
+    "meta": {
+      "emailLabel": "E-Mail:",
+      "phoneLabel": "Tel:"
+    }
+  },
+  "footer": {
+    "subtitle": "frontend developer",
+    "legal": "Rechtlicher Hinweis",
+    "privacy": "Datenschutzerklärung",
+    "copyright": "© 2025 Thierno Diallo. Alle Rechte vorbehalten."
+  },
+  "hero": {
+    "contact": "Kontakt"
+  },
+  "testimonials": {
+    "heading": "Benötigen Sie einen Teamplayer? Das sagen meine Kollegen über mich",
+    "t1": {
+      "name": "Bhuwan",
+      "project": "Projekt Zeitplaner",
+      "quote": "Thierno musste Inhalte in Zusammenarbeit mit den Teammitgliedern entwickeln, formatieren und liefern. Er ist eine zuverlässige und freundliche Person."
+    },
+    "t2": {
+      "name": "Djene Camara",
+      "project": "Projekt Pollo Loco",
+      "quote": "Er ist ein vertrauenswürdiger Teamplayer und kommt mit dem Stress von Deadlines zurecht. Strukturiertes Arbeiten und klarer Code."
+    },
+    "t3": {
+      "name": "Marcel Störensen",
+      "project": "Projekt Join",
+      "quote": "Er ist eine zuverlässige und freundliche Person. Arbeitet strukturiert und schreibt klaren Code. Ich empfehle ihn als Kollegen."
+    }
+  }
+}

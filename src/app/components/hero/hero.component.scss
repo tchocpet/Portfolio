@@ -1,0 +1,147 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+}
+.hero-inner {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.hero-text h2 {
+  font-size: 2.5rem;
+  color: #02f4bf;
+  line-height: 2rem;
+  margin: 10px 0;
+}
+.hero-text h1 {
+  font-size: 3.5rem;
+  color: #02f4bf;
+  line-height: 3rem;
+  margin: 10px 0;
+}
+.hero-image {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image img {
+  max-width: 360px;
+  border-radius: 8px;
+  display: block;
+  transform: none;
+  transition: none;
+}
+
+/* Left vertical contact button */
+.contact-vertical {
+  position: absolute;
+  left: 3rem;
+  top: 28%;
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: left center;
+  background: transparent;
+  border: 1px solid #02f4bf;
+  color: #e15544;
+  padding: 8px 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.contact-vertical:hover {
+  color: #02f4bf;
+}
+
+/* Down arrow */
+.down-arrow {
+  position: absolute;
+  left: 50%;
+  top: 22%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  background: transparent;
+  border: 2px solid transparent;
+  cursor: pointer;
+  color: #e15544;
+  padding: 5px;
+  height: 65px;
+}
+
+.down-arrow:hover {
+  color: #02f4bf;
+  border-color: #02f4bf;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+  }
+  .hero-text h2 {
+    font-size: 0.9rem;
+  }
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+  .hero-image img {
+    max-width: 200px;
+  }
+  .hero {
+    min-height: 60vh;
+  }
+  .contact-vertical {
+    display: none;
+  }
+  .down-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+  }
+  .hero-text h2 {
+    font-size: 0.9rem;
+  }
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+  .hero-image img {
+    max-width: 200px;
+  }
+  .hero {
+    min-height: 60vh;
+  }
+  .contact-vertical {
+    display: none;
+  }
+  .down-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 50vh;
+    padding-top: 2rem;
+  }
+  .hero-text {
+    text-align: center;
+  }
+  .hero-text h2 {
+    font-size: 0.8rem;
+  }
+  .hero-text h1 {
+    font-size: 1.4rem;
+  }
+  .hero-image img {
+    max-width: 100%;
+  }
+}

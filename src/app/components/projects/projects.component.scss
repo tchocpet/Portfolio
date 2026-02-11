@@ -1,0 +1,249 @@
+.projects {
+  padding: 72px 0;
+}
+
+.projects-title {
+  font-size: 1.8rem;
+  color: #E15544;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+
+  &.reverse {
+    grid-template-columns: 1fr 1fr;
+    
+    .project-image {
+      order: 2;
+    }
+    
+    .project-content {
+      order: 1;
+    }
+  }
+}
+
+.project-image {
+  overflow: hidden;
+  border-radius: 8px;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-title {
+  font-size: 1.6rem;
+  color: #02F4BF;
+  font-weight: 700;
+  margin: 0;
+}
+
+.project-tech {
+  font-size: 0.85rem;
+  color: #02F4BF;
+  font-weight: 500;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  color: #02F4BF;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.btn {
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 300ms ease;
+  cursor: pointer;
+  border: 2px solid;
+
+  &.btn-outline {
+    color: #02F4BF;
+    border-color: #02F4BF;
+    background: transparent;
+
+    &:hover {
+      color: #E15544;
+    }
+  }
+
+  &.btn-primary {
+    color: #E15544;
+    background: #02F4BF;
+    border-color: #02F4BF;
+
+    &:hover {
+      color: #0B042D;
+    }
+  }
+}
+
+.project-buttons-mb{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .projects-title {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+  .projects-list {
+    gap: 30px;
+  }
+  .project-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-title {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .project-tech {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+  .project-description {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  .project-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 0.75rem;
+  }
+  .project-content{
+    order: 1;
+  }
+  .project-image{
+    order: 2;
+  }
+  /* Ensure reversed cards stack the same on small mobile screens */
+  .project-card.reverse .project-content {
+    order: 1 !important;
+  }
+  .project-card.reverse .project-image {
+    order: 2 !important;
+  }
+  .project-buttons-mb{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 12px;
+    padding: 0 2rem;
+    order: 3;
+
+    .btn-outline{
+      color: #E15544;
+    }
+  }
+  .project-buttons{
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-title {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+  .projects-list {
+    gap: 30px;
+  }
+  .project-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-title {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .project-tech {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+  .project-description {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  .project-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 0.75rem;
+  }
+  .project-content{
+    order: 1;
+  }
+  .project-image{
+    order: 2;
+  }
+  /* Ensure reversed cards stack the same on small mobile screens */
+  .project-card.reverse .project-content {
+    order: 1 !important;
+  }
+  .project-card.reverse .project-image {
+    order: 2 !important;
+  }
+  .project-buttons-mb{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 12px;
+    padding: 0 2rem;
+    order: 3;
+
+    .btn-outline{
+      color: #E15544;
+    }
+  }
+  .project-buttons{
+    display: none;
+  }
+}

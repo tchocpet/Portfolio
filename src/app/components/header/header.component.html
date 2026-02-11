@@ -1,0 +1,79 @@
+<mat-toolbar #appToolbar color="primary" class="app-toolbar">
+  <div class="toolbar-container">
+    <a class="logo" (click)="scrollToSection('hero')">&lt;TMOD&gt;</a>
+
+    <nav class="nav nav--desktop">
+      <a mat-button (click)="scrollToSection('why-me')">{{ 'nav.whyMe' | translate }}</a>
+      <a mat-button (click)="scrollToSection('skills')">{{ 'nav.skills' | translate }}</a>
+      <a mat-button (click)="scrollToSection('projects')">{{ 'nav.projects' | translate }}</a>
+      <a mat-button (click)="scrollToSection('contact')">{{ 'nav.contact' | translate }}</a>
+    </nav>
+
+    <div class="language-toggle" role="tablist" aria-label="Language switch">
+      <button
+        mat-button
+        class="lang-option"
+        [class.active]="translationService.currentLanguage() === 'EN'"
+        (click)="setLanguage('EN')"
+        aria-pressed="{{ translationService.currentLanguage() === 'EN' }}"
+      >
+        EN
+      </button>
+
+      <span class="sep" aria-hidden="true">|</span>
+
+      <button
+        mat-button
+        class="lang-option"
+        [class.active]="translationService.currentLanguage() === 'DE'"
+        (click)="setLanguage('DE')"
+        aria-pressed="{{ translationService.currentLanguage() === 'DE' }}"
+      >
+        DE
+      </button>
+    </div>
+
+    <!-- Hamburger menu button (mobile only) -->
+    <button
+      class="hamburger"
+      (click)="toggleMobileMenu()"
+      aria-label="Toggle menu"
+      [class.active]="mobileMenuOpen()"
+      [attr.aria-expanded]="mobileMenuOpen()"
+      aria-controls="mobileMenu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu drawer -->
+  <nav id="mobileMenu" class="mobile-menu" [class.open]="mobileMenuOpen()">
+    <a class="mobile-nav-item" (click)="scrollToSection('why-me')">{{ 'nav.whyMe' | translate }}</a>
+    <a class="mobile-nav-item" (click)="scrollToSection('skills')">{{
+      'nav.skills' | translate
+    }}</a>
+    <a class="mobile-nav-item" (click)="scrollToSection('projects')">{{
+      'nav.projects' | translate
+    }}</a>
+    <a class="mobile-nav-item" (click)="scrollToSection('contact')">{{
+      'nav.contact' | translate
+    }}</a>
+    <div class="mobile-lang-toggle">
+      <button
+        [class.active]="translationService.currentLanguage() === 'EN'"
+        (click)="setLanguage('EN')"
+      >
+        EN
+      </button>
+      <span>|</span>
+      <button
+        [class.active]="translationService.currentLanguage() === 'DE'"
+        (click)="setLanguage('DE')"
+      >
+        DE
+      </button>
+    </div>
+  </nav>
+</mat-toolbar>

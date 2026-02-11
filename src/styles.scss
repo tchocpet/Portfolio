@@ -1,0 +1,99 @@
+
+// Include theming for Angular Material with `mat.theme()`.
+// This Sass mixin will define CSS variables that are used for styling Angular Material
+// components according to the Material 3 design spec.
+// Learn more about theming and how to use it for your application's
+// custom components at https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+
+html {
+  @include mat.theme((
+    color: (
+      primary: mat.$magenta-palette,
+      tertiary: mat.$violet-palette,
+    ),
+    typography: Roboto Mono,
+    density: 0,
+  ));
+}
+
+:root {
+  --app-header-height: 92px; /* default, will be updated at runtime */
+}
+
+/* Ensure anchor scrolling accounts for the fixed header */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--app-header-height);
+}
+
+/* Consolidated body styles with large per-viewport gradient sections */
+body {
+  /* Material system vars */
+  color-scheme: dark;
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+  background-image: linear-gradient(to bottom, #0B042D, #1F0880, #0B042F, #241085);
+  background-size: 100% 800vh;
+  // background-attachment: fixed;
+}
+
+/* Global styles */
+html, body { 
+  height: 100%; 
+  width: 100%;
+}
+
+/* (the consolidated body block above replaces previous duplicate definitions) */
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 75vh;
+  width: 100%;
+  // padding-top: var(--app-header-height);
+}
+
+/* App container: central column with side padding */
+.app-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 12px;
+    width: 100%;
+  }
+}
+
+/* Section spacing */
+.section {
+  // padding: 72px 0;
+
+  @media (max-width: 768px) {
+    padding: 48px 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 32px 0;
+  }
+}
+
+/* Media query breakpoints */
+@media (max-width: 768px) {
+  main {
+    min-height: auto;
+  }
+}
+
+

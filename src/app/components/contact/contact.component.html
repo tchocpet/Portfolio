@@ -1,0 +1,172 @@
+<section class="contact">
+  <h2 class="contact__title">{{ 'contact.heading' | translate }}</h2>
+  <div class="contact__container">
+    <div class="contact__info">
+      <p class="contact__desc">{{ 'contact.description' | translate }}</p>
+
+      <div class="contact__meta">
+        <div class="meta__item">
+          <mat-icon>email</mat-icon>
+          <span
+            >{{ 'contact.meta.emailLabel' | translate }}
+            <a class="tel" href="mailto:thiernomam78@gmail.com">thiernomam78@gmail.com</a></span
+          >
+        </div>
+        <div class="meta__item">
+          <mat-icon>phone</mat-icon
+          ><span
+            >{{ 'contact.meta.phoneLabel' | translate }}
+            <a class="tel" href="tel: +491791143271">01791143271</a></span
+          >
+        </div>
+      </div>
+      <!-- <svg class="arrow arrow-up" src="/icons/arrow_up.svg" alt="arrow"></svg> -->
+      <a href="#hero" class="arrow-link" aria-label="Scroll to top">
+        <svg
+          class="arrow arrow-up"
+          width="22"
+          height="50"
+          viewBox="0 0 22 50"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.58575 4.9366L2.67354 11.2396C2.29178 11.5877 1.7077 11.5877 1.32595 11.2396L0.810337 10.7694C0.375397 10.3728 0.375397 9.68822 0.810337 9.29161L10.3262 0.61441C10.708 0.266304 11.292 0.266304 11.6738 0.61441L21.1897 9.29161C21.6246 9.68822 21.6246 10.3728 21.1897 10.7694L20.6741 11.2396C20.2923 11.5877 19.7082 11.5877 19.3265 11.2396L12.4142 4.9366L12.4142 49C12.4142 49.5523 11.9665 50 11.4142 50H10.5858C10.0335 50 9.58575 49.5523 9.58575 49L9.58575 4.9366Z"
+            fill="currentColor"
+          />
+        </svg>
+      </a>
+    </div>
+
+    <div class="contact__input">
+      <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="contact-section">
+          <div class="name-email">
+            <div class="row">
+              <input
+                type="text"
+                placeholder="{{ 'contact.placeholder.name' | translate }}"
+                class="field field--text"
+                formControlName="name"
+              />
+              <div
+                class="error-message"
+                *ngIf="
+                  contactForm.get('name')?.hasError('required') && contactForm.get('name')?.touched
+                "
+              >
+                <span class="error-text">{{ 'contact.errors.nameRequired' | translate }}</span>
+                <span class="checkmark exclamation">!</span>
+              </div>
+              <div
+                class="success-message"
+                *ngIf="contactForm.get('name')?.valid && contactForm.get('name')?.touched"
+              >
+                <span class="checkmark">✓</span>
+              </div>
+            </div>
+            <div class="row">
+              <input
+                type="email"
+                placeholder="{{ 'contact.placeholder.email' | translate }}"
+                class="field field--text"
+                formControlName="email"
+              />
+              <div
+                class="error-message"
+                *ngIf="
+                  contactForm.get('email')?.hasError('required') &&
+                  contactForm.get('email')?.touched
+                "
+              >
+                <span class="error-text">{{ 'contact.errors.emailRequired' | translate }}</span>
+                <span class="checkmark exclamation">!</span>
+              </div>
+              <div
+                class="success-message"
+                *ngIf="contactForm.get('email')?.valid && contactForm.get('email')?.touched"
+              >
+                <span class="checkmark">✓</span>
+              </div>
+            </div>
+          </div>
+          <div class="message">
+            <div class="row">
+              <textarea
+                placeholder="{{ 'contact.placeholder.message' | translate }}"
+                class="field field--textarea"
+                formControlName="message"
+              ></textarea>
+              <div
+                class="error-message"
+                *ngIf="
+                  contactForm.get('message')?.hasError('required') &&
+                  contactForm.get('message')?.touched
+                "
+              >
+                <span class="error-text">{{ 'contact.errors.messageRequired' | translate }}</span>
+                <span class="checkmark exclamation">!</span>
+              </div>
+              <div
+                class="success-message"
+                *ngIf="contactForm.get('message')?.valid && contactForm.get('message')?.touched"
+              >
+                <span class="checkmark">✓</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <label class="privacy" [class.privacy--checked]="contactForm.get('privacy')?.value">
+          <input type="checkbox" formControlName="privacy" />
+          <span>
+            {{ 'contact.privacyPrefix' | translate }}
+            <a routerLink="/privacy" class="privacy-link">{{ 'footer.privacy' | translate }}</a>
+            {{ 'contact.privacySuffix' | translate }}
+          </span>
+        </label>
+
+        <div class="actions">
+          <div *ngIf="serverMessage" class="server-message" role="status" aria-live="polite">
+            {{ serverMessage }}
+          </div>
+          <button type="submit" class="btn-send" [disabled]="!contactForm.valid || sending">
+            {{ sending ? ('contact.sending' | translate) : ('contact.send' | translate) }}
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="arrow-up-mobile-container">
+      <a href="#hero" class="arrow-link-mb" aria-label="Scroll to top">
+        <svg
+          class="arrow arrow-up arrow-up-mb"
+          width="22"
+          height="50"
+          viewBox="0 0 22 50"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.58575 4.9366L2.67354 11.2396C2.29178 11.5877 1.7077 11.5877 1.32595 11.2396L0.810337 10.7694C0.375397 10.3728 0.375397 9.68822 0.810337 9.29161L10.3262 0.61441C10.708 0.266304 11.292 0.266304 11.6738 0.61441L21.1897 9.29161C21.6246 9.68822 21.6246 10.3728 21.1897 10.7694L20.6741 11.2396C20.2923 11.5877 19.7082 11.5877 19.3265 11.2396L12.4142 4.9366L12.4142 49C12.4142 49.5523 11.9665 50 11.4142 50H10.5858C10.0335 50 9.58575 49.5523 9.58575 49L9.58575 4.9366Z"
+            fill="currentColor"
+          />
+        </svg>
+      </a>
+    </div>
+    <div class="contact__meta_mobile">
+      <div class="meta__item">
+        <mat-icon>email</mat-icon>
+        <span
+          >{{ 'contact.meta.emailLabel' | translate }}
+          <a class="tel" href="mailto:thiernomam78@gmail.com">thiernomam78@gmail.com</a></span
+        >
+      </div>
+      <div class="meta__item">
+        <mat-icon>phone</mat-icon><br /><span
+          >{{ 'contact.meta.phoneLabel' | translate }}
+
+          <a class="tel" href="tel:  +491791143271">01791143271</a></span
+        >
+      </div>
+    </div>
+  </div>
+</section>

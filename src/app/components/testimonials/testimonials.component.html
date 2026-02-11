@@ -1,0 +1,16 @@
+<div class="testimonials">
+  <h2 class="testimonials__title">{{ 'testimonials.heading' | translate }}</h2>
+
+  <div class="testimonials__list">
+    <div class="testimonials__viewport">
+      <div class="testimonials__track">
+        <div class="testimonial" *ngFor="let t of testimonials">
+          <h3 class="testimonial__name">{{ ('testimonials.' + t.key + '.name') | translate }}</h3>
+          <p class="testimonial__project">{{ ('testimonials.' + t.key + '.project') | translate }}</p>
+          <blockquote class="testimonial__quote">{{ ('testimonials.' + t.key + '.quote') | translate }}</blockquote>
+        </div>
+      </div>
+    </div>
+    <img class="arrow arrow-down-desk" src="/icons/arrow-5.svg" alt="arrow" />
+  </div>
+</div>

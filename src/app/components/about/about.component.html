@@ -1,0 +1,73 @@
+<section id="why-me" class="about">
+  <div class="about-grid app-container">
+    <div class="about-left">
+      <img src="/images/whyme.png" alt="Why me image" class="whyme-img" />
+    </div>
+
+    <div class="about-right">
+      <h2 class="red-title">{{ 'about.heading' | translate }}</h2>
+      <p class="lead">{{ 'about.description' | translate }}</p>
+      <img class="arrow arrow-down-mb" src="/icons/arrow-5.svg" alt="arrow" />
+      <div class="iam-section">
+        <h3 class="iam-title">{{ 'about.iam' | translate }}</h3>
+
+        <div>
+          <div class="iam-showcase">
+            <div class="showcase-item top-left">
+              <div class="iam-item">
+                <div class="location-icon">
+                  <img src="/icons/location.svg" alt="location icon" />
+                  <img src="/icons/ellipse.svg" alt="location icon ellipse" />
+                </div>
+                <div class="iam-text">
+                  <!-- located<br class="br-line" /><span>in Bochum</span> -->
+
+                  {{ 'about.location' | translate }}
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase-item bottom-center">
+              <img class="arrow arrow-down" src="/icons/arrow-5.svg" alt="arrow" />
+              <div class="iam-item located">
+                <img src="/icons/relocate.svg" alt="relocate icon" />
+                <img src="/icons/tilt-relocate.svg" alt="relocate icon" class="hover-icon" />
+                <div class="iam-text">
+                  <!-- open to<br class="br-line" /><span>relocate</span> -->
+                  {{ 'about.relocate' | translate }}
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase-item top-right">
+              <div class="iam-item">
+                <img src="/icons/remote.svg" alt="remote icon" class="remote" />
+                <img
+                  src="/icons/wifi-remote.svg"
+                  alt="remote icon"
+                  class="hover-icon hover-icon-remote"
+                />
+                <div class="iam-text">
+                  <!-- open to<br class="br-line" /><span>work remote</span> -->
+                  {{ 'about.remote' | translate }}
+                </div>
+              </div>
+              <div class="arrows">
+                <img class="arrow arrow-up" src="/icons/arrow-4.svg" alt="arrow" />
+                <img class="arrow arrow-twist" src="/icons/arrow-1.svg" alt="arrow" />
+              </div>
+            </div>
+            <div class="arrow-down-mb-reflect-container">
+              <img class="arrow arrow-down-mb-reflect" src="/icons/arrow-5.svg" alt="arrow" />
+            </div>
+          </div>
+          <div class="talk-btn-container">
+            <button class="talk-btn" (click)="scrollTo('contact')">
+              {{ 'about.talk' | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,97 @@
+{
+  "nav": {
+    "whyMe": "Why me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "FRONTEND DEVELOPER",
+    "name": "Thierno Diallo"
+  },
+  "about": {
+    "heading": "Why me",
+    "description": "Write some information about yourself that is IT related. Why are you passionate about coding? Highlight your motivation for professional growth and continuous learning. Emphasise your strong problem-solving skills and passion for coding."
+  },
+  "skills": {
+    "heading": "My Skills"
+  },
+  "projects": {
+    "heading": "My Projects",
+    "projectA": {
+      "title": "Project A",
+      "description": "Short description"
+    },
+    "projectB": {
+      "title": "Project B",
+      "description": "Short description"
+    },
+    "project_1": {
+      "title": "Join",
+      "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+    },
+    "project_2": {
+      "title": "Zeitplaner",
+      "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+    },
+    "project_3": {
+      "title": "Pollo Loco",
+      "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco also to defeat against the crazy hen."
+    }
+  },
+  "contact": {
+    "heading": "Contact",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending...",
+    "placeholder": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message"
+    },
+    "privacyText": "I've read the <a href=\"#\">privacy policy</a> and agree to the processing of my data as outlined.",
+    "privacyPrefix": "I've read the",
+    "privacySuffix": "and agree to the processing of my data as outlined.",
+    "errors": {
+      "nameRequired": "Your name is required",
+      "emailRequired": "Your email is required",
+      "messageRequired": "Your message is required"
+    },
+    "success": "Message sent — thank you!",
+    "failure": "Failed to send message. Please try again later.",
+    "description": "Encourage people to contact you and describe what role you are interested in. Express interest in contributing to a new project.",
+    "meta": {
+      "emailLabel": "E-mail:",
+      "phoneLabel": "Tel:"
+    }
+  },
+  "footer": {
+    "subtitle": "frontend developer",
+    "legal": "Legal notice",
+    "privacy": "Privacy policy",
+    "copyright": "© 2025 Thierno Diallo. All rights reserved."
+  },
+  "hero": {
+    "contact": "Contact me"
+  },
+  "testimonials": {
+    "heading": "Need a teamplayer? Here is what my colleagues said about me",
+    "t1": {
+      "name": "Bhuwan ",
+      "project": "Project Zeitplaner",
+      "quote": "Thierno had to develop, format and deliver content in collaboration with the team members. He is a reliable and friendly person."
+    },
+    "t2": {
+      "name": "Idrissa Bah",
+      "project": "Project Pollo Loco",
+      "quote": "He is a trustworthy teamplayer and can cope with the stress of deadlines. Structured work and clear code."
+    },
+    "t3": {
+      "name": "James Rugman",
+      "project": "Project Join",
+      "quote": "He is a reliable and friendly person. Work in a structured way and write clear code. I recommend him as a colleague."
+    }
+  }
+}

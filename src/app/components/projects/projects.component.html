@@ -1,0 +1,32 @@
+<section id="projects" class="projects app-container">
+  <h2 class="projects-title">{{ 'projects.heading' | translate }}</h2>
+  
+  <div class="projects-list">
+    <div *ngFor="let project of projects; let i = index" class="project-card" [ngClass]="{ 'reverse': i % 2 === 1 }">
+      <div class="project-image">
+        <img [src]="project.image" [alt]="project.title" />
+      </div>
+      
+      <div class="project-content">
+        <h3 class="project-title">{{ ('projects.' + project.id + '.title') | translate }}</h3>
+        
+        <div class="project-tech">
+          <span *ngFor="let t of project.tech; let last = last">
+            {{ t }}<span *ngIf="!last"> | </span>
+          </span>
+        </div>
+        
+        <p class="project-description">{{ ('projects.' + project.id + '.description') | translate }}</p>
+        
+        <div class="project-buttons">
+          <a href="{{ project.github }}" target="_blank" class="btn btn-outline">GitHub</a>
+          <a href="{{ project.liveTest }}" target="_blank" class="btn btn-primary">Live Test</a>
+        </div>
+      </div>
+      <div class="project-buttons-mb">
+        <a href="{{ project.github }}" target="_blank" class="btn btn-outline">GitHub</a>
+        <a href="{{ project.liveTest }}" target="_blank" class="btn btn-primary">Live Test</a>
+      </div>
+    </div>
+  </div>
+</section>
