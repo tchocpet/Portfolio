@@ -39,7 +39,7 @@ export class ProjectsComponent {
         'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco also to defeat against the crazy hen.',
       tech: ['JavaScript', 'HTML', 'CSS'],
       image: '/images/project_3.png',
-      github: 'https://github.com/tchocpet/EL-POLLO-LOCO.git',
+      github: 'https://github.com/tchocpet/EL-POLLO-LOCCO.git',
       liveTest: 'https://boisterous-speculoos-f8b521.netlify.app/',
     },
   ];
