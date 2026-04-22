@@ -34,13 +34,13 @@ export class ProjectsComponent {
     },
     {
       id: 'project_3',
-      title: 'Pollo Loco',
+      title: 'el-pollo-locco',
       description:
         'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco also to defeat against the crazy hen.',
       tech: ['JavaScript', 'HTML', 'CSS'],
       image: '/images/project_3.png',
       github: 'https://github.com/tchocpet/EL-POLLO-LOCCO.git',
-      liveTest: 'https://ell-pollo-locco.netlify.app/',
+      liveTest: 'https://el-pollo-locco.netlify.app/',
     },
   ];
 }
