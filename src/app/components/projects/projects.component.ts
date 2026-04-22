@@ -40,7 +40,7 @@ export class ProjectsComponent {
       tech: ['JavaScript', 'HTML', 'CSS'],
       image: '/images/project_3.png',
       github: 'https://github.com/tchocpet/EL-POLLO-LOCCO.git',
-      liveTest: 'https://el-pollo-locco.netlify.app/',
+      liveTest: 'https://ell-pollo-locco.netlify.app/',
     },
   ];
 }
