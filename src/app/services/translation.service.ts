@@ -44,9 +44,9 @@ const TRANSLATIONS = {
           'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       },
       project_2: {
-        title: 'Timer-tracker',
+        title: 'Pokedex',
         description:
-          'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+          'An interactive Pokédex application that uses API data to display Pokémon, including their stats, types, and images. Built with HTML, CSS and JavaScript.',
       },
       project_3: {
         title: 'Pollo Loco',
@@ -88,7 +88,7 @@ const TRANSLATIONS = {
       heading: 'Need a teamplayer? Here is what my colleagues said about me',
       t1: {
         name: 'Bhuwan',
-        project: 'Project Timer-tracker',
+        project: 'Project Pokedex',
         quote:
           'Thierno had to develop, format and deliver content in collaboration with the team members. He is a reliable and friendly person.',
       },
@@ -190,9 +190,9 @@ const TRANSLATIONS = {
           'Aufgabenmanager, inspiriert vom Kanban-System. Aufgaben per Drag & Drop erstellen und organisieren, Benutzer und Kategorien zuweisen.',
       },
       project_2: {
-        title: 'Zeiterfassung',
+        title: 'Pokedex',
         description:
-          'Aufgabenmanager, inspiriert vom Kanban-System. Aufgaben per Drag & Drop erstellen und organisieren, Benutzer und Kategorien zuweisen.',
+          'Eine Pokédex-Webanwendung, die Pokémon-Daten über eine API lädt und darstellt. Erstellt mit HTML, CSS und JavaScript.',
       },
       project_3: {
         title: 'Pollo Loco',
@@ -234,9 +234,9 @@ const TRANSLATIONS = {
       heading: 'Benötigen Sie einen Teamplayer? Das sagen meine Kollegen über mich',
       t1: {
         name: 'Bhuwan',
-        project: 'Projekt Zeitplaner',
+        project: 'Pokedex',
         quote:
-          'Thierno musste Inhalte in Zusammenarbeit mit den Teammitgliedern entwickeln, formatieren und liefern. Er ist eine zuverlässige und freundliche Person.',
+          'Thierno hat das Projekt eigenständig entwickelt und dabei sauberen Code sowie eine ansprechende Benutzeroberfläche umgesetzt. Er ist eine zuverlässige und angenehme Person in der Zusammenarbeit.',
       },
       t2: {
         name: 'Djene Camara',
@@ -311,7 +311,6 @@ export class TranslationService {
   }
 
   setLanguage(lang: 'EN' | 'DE') {
-    console.log(`Setting language to: ${lang}`);
     this.translations.set(TRANSLATIONS[lang]);
     this.currentLanguage.set(lang);
 

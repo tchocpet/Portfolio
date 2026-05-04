@@ -31,8 +31,8 @@
       "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
     },
     "project_2": {
-      "title": "Zeitplaner",
-      "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      "title": "Pokedex",
+      "description": "An interactive Pokédex application that uses API data to display Pokémon, including their stats, types, and images. Built with HTML, CSS and JavaScript."
     },
     "project_3": {
       "title": "Pollo Loco",
@@ -80,11 +80,11 @@
     "heading": "Need a teamplayer? Here is what my colleagues said about me",
     "t1": {
       "name": "Bhuwan ",
-      "project": "Project Zeitplaner",
+      "project": "Project Pokedex",
       "quote": "Thierno had to develop, format and deliver content in collaboration with the team members. He is a reliable and friendly person."
     },
     "t2": {
-      "name": "Idrissa Bah",
+      "name": "Djene Camara",
       "project": "Project Pollo Loco",
       "quote": "He is a trustworthy teamplayer and can cope with the stress of deadlines. Structured work and clear code."
     },

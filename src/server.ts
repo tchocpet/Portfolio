@@ -49,14 +49,12 @@ app.post('/api/contact', async (req, res) => {
       text: mailText,
       html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong><br/>${message.replace(
         /\n/g,
-        '<br/>'
+        '<br/>',
       )}</p>`,
     });
 
-    console.log('Contact form email sent:', info && (info as any).messageId);
     return res.json({ success: true });
   } catch (err) {
-    console.error('Failed to send contact email', err);
     return res.status(500).json({ error: 'Failed to send email' });
   }
 });
@@ -81,7 +79,7 @@ app.use(
     maxAge: '1y',
     index: false,
     redirect: false,
-  })
+  }),
 );
 
 /**
@@ -105,7 +103,7 @@ if (isMainModule(import.meta.url) || process.env['pm_id']) {
       throw error;
     }
 
-    console.log(`Node Express server listening on http://localhost:${port}`);
+    app.listen(port);
   });
 }
 

@@ -1,4 +1,13 @@
-import { Component, OnInit, AfterViewInit, ElementRef, ViewChild, HostListener, inject, signal } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  AfterViewInit,
+  ElementRef,
+  ViewChild,
+  HostListener,
+  inject,
+  signal,
+} from '@angular/core';
 import { PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { CommonModule } from '@angular/common';
@@ -46,12 +55,12 @@ export class HeaderComponent implements OnInit {
       } catch {}
     }
   }
-  constructor(public translationService: TranslationService, private router: Router) {
-    console.log('HeaderComponent initialized');
-  }
+  constructor(
+    public translationService: TranslationService,
+    private router: Router,
+  ) {}
 
   ngOnInit() {
-    console.log('HeaderComponent ngOnInit - Language:', this.translationService.currentLanguage());
     this.translationService.initializeLanguage();
   }
 
@@ -72,7 +81,6 @@ export class HeaderComponent implements OnInit {
   }
 
   setLanguage(lang: 'EN' | 'DE') {
-    console.log('Setting language to:', lang);
     this.translationService.setLanguage(lang);
   }
 

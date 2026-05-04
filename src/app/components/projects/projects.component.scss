@@ -4,7 +4,7 @@
 
 .projects-title {
   font-size: 1.8rem;
-  color: #E15544;
+  color: #e15544;
   font-weight: 700;
   text-align: center;
   margin-bottom: 48px;
@@ -25,11 +25,11 @@
 
   &.reverse {
     grid-template-columns: 1fr 1fr;
-    
+
     .project-image {
       order: 2;
     }
-    
+
     .project-content {
       order: 1;
     }
@@ -56,20 +56,20 @@
 
 .project-title {
   font-size: 1.6rem;
-  color: #02F4BF;
+  color: #02f4bf;
   font-weight: 700;
   margin: 0;
 }
 
 .project-tech {
-  font-size: 0.85rem;
-  color: #02F4BF;
+  font-size: 1rem;
+  color: #02f4bf;
   font-weight: 500;
 }
 
 .project-description {
-  font-size: 0.95rem;
-  color: #02F4BF;
+  font-size: 1rem;
+  color: #02f4bf;
   line-height: 1.6;
   margin: 0;
 }
@@ -83,7 +83,7 @@
 .btn {
   padding: 8px 24px;
   border-radius: 4px;
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
@@ -92,27 +92,27 @@
   border: 2px solid;
 
   &.btn-outline {
-    color: #02F4BF;
-    border-color: #02F4BF;
+    color: #02f4bf;
+    border-color: #02f4bf;
     background: transparent;
 
     &:hover {
-      color: #E15544;
+      color: #e15544;
     }
   }
 
   &.btn-primary {
-    color: #E15544;
-    background: #02F4BF;
-    border-color: #02F4BF;
+    color: #e15544;
+    background: #02f4bf;
+    border-color: #02f4bf;
 
     &:hover {
-      color: #0B042D;
+      color: #0b042d;
     }
   }
 }
 
-.project-buttons-mb{
+.project-buttons-mb {
   display: none;
 }
 
@@ -135,11 +135,11 @@
     text-align: center;
   }
   .project-tech {
-    font-size: 0.75rem;
+    font-size: 1rem;
     text-align: center;
   }
   .project-description {
-    font-size: 0.85rem;
+    font-size: 1rem;
     text-align: center;
   }
   .project-buttons {
@@ -150,12 +150,12 @@
     width: 100%;
     text-align: center;
     padding: 8px 12px;
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
-  .project-content{
+  .project-content {
     order: 1;
   }
-  .project-image{
+  .project-image {
     order: 2;
   }
   /* Ensure reversed cards stack the same on small mobile screens */
@@ -165,7 +165,7 @@
   .project-card.reverse .project-image {
     order: 2 !important;
   }
-  .project-buttons-mb{
+  .project-buttons-mb {
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -173,11 +173,11 @@
     padding: 0 2rem;
     order: 3;
 
-    .btn-outline{
-      color: #E15544;
+    .btn-outline {
+      color: #e15544;
     }
   }
-  .project-buttons{
+  .project-buttons {
     display: none;
   }
 }
@@ -201,11 +201,11 @@
     text-align: center;
   }
   .project-tech {
-    font-size: 0.75rem;
+    font-size: 1rem;
     text-align: center;
   }
   .project-description {
-    font-size: 0.85rem;
+    font-size: 1rem;
     text-align: center;
   }
   .project-buttons {
@@ -216,12 +216,12 @@
     width: 100%;
     text-align: center;
     padding: 8px 12px;
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
-  .project-content{
+  .project-content {
     order: 1;
   }
-  .project-image{
+  .project-image {
     order: 2;
   }
   /* Ensure reversed cards stack the same on small mobile screens */
@@ -231,7 +231,7 @@
   .project-card.reverse .project-image {
     order: 2 !important;
   }
-  .project-buttons-mb{
+  .project-buttons-mb {
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -239,11 +239,11 @@
     padding: 0 2rem;
     order: 3;
 
-    .btn-outline{
-      color: #E15544;
+    .btn-outline {
+      color: #e15544;
     }
   }
-  .project-buttons{
+  .project-buttons {
     display: none;
   }
 }

@@ -1,5 +1,5 @@
 .contact {
-  padding: 4rem 0 0 0;
+  padding: 0;
 
   &__info {
     display: grid;
@@ -85,7 +85,7 @@
 
   .field {
     width: 100%;
-    padding: 18px 20px;
+    padding: 12px 12px;
     border: 2px solid #02f4bf;
     background: transparent;
     color: #02f4bf;
@@ -109,8 +109,9 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 4px;
-    font-size: 12px;
+    font-size: 16px;
     color: #e15544;
+    min-height: 24px;
   }
 
   .error-text {
@@ -121,7 +122,8 @@
     display: flex;
     justify-content: flex-end;
     margin-top: 4px;
-    font-size: 14px;
+    font-size: 16px;
+    min-height: 24px;
   }
 
   .checkmark {
@@ -134,7 +136,7 @@
     align-items: center;
     gap: 12px;
     color: #02f4bf;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .privacy input[type='checkbox'] {
@@ -173,7 +175,17 @@
 
   .actions {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 56px;
+    gap: 1rem;
+  }
+
+  .server-message {
+    min-height: 32px;
+    font-size: 1rem;
+    font-weight: 900;
+    color: #02f4bf;
   }
 
   .btn-send {
@@ -206,7 +218,7 @@
 
 @media (max-width: 768px) {
   .contact {
-    padding: 2rem 0 0 0;
+    padding: 0;
 
     &__title {
       font-size: 1.6rem;
@@ -215,7 +227,7 @@
     }
 
     &__desc {
-      font-size: 0.85rem;
+      font-size: 1rem;
       margin-bottom: 1.5rem;
       text-align: center;
     }
@@ -230,7 +242,7 @@
       gap: 0.75rem;
 
       .meta__item {
-        font-size: 0.8rem;
+        font-size: 1rem;
         gap: 8px;
       }
     }
@@ -240,7 +252,7 @@
       text-align: center;
 
       .meta__item {
-        font-size: 0.8rem;
+        font-size: 1rem;
         gap: 8px;
         color: #02f4bf;
       }
@@ -269,15 +281,15 @@
     }
 
     .error-message {
-      font-size: 10px;
+      font-size: 16px;
     }
 
     .success-message {
-      font-size: 12px;
+      font-size: 16px;
     }
 
     .privacy {
-      font-size: 12px;
+      font-size: 16px;
       gap: 8px;
     }
 
@@ -287,117 +299,15 @@
     }
 
     .actions {
-      justify-content: flex-end;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 56px;
       margin-top: 1rem;
     }
 
     .btn-send {
       padding: 8px 16px;
-      font-size: 13px;
-    }
-
-    .arrow-up-mobile-container {
-      display: flex;
-      justify-content: right;
-      margin-top: 2rem;
-    }
-
-    .arrow-link {
-      display: none;
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .contact {
-    padding: 2rem 0 0 0;
-
-    &__title {
-      font-size: 1.6rem;
-      margin: 0 0 0.8rem;
-      text-align: center;
-    }
-
-    &__desc {
-      font-size: 0.85rem;
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-
-    &__info {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-
-    &__meta {
-      display: none;
-      gap: 0.75rem;
-
-      .meta__item {
-        font-size: 0.8rem;
-        gap: 8px;
-      }
-    }
-
-    &__meta_mobile {
-      gap: 0.75rem;
-      text-align: center;
-
-      .meta__item {
-        font-size: 0.8rem;
-        gap: 8px;
-        color: #02f4bf;
-      }
-    }
-
-    .contact-section {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-
-    .contact-form {
-      gap: 1.2rem;
-    }
-
-    .name-email {
-      gap: 1.2rem;
-    }
-
-    .field {
-      padding: 12px 12px;
-      font-size: 13px;
-    }
-
-    .field--textarea {
-      min-height: 100px;
-    }
-
-    .error-message {
-      font-size: 10px;
-    }
-
-    .success-message {
-      font-size: 12px;
-    }
-
-    .privacy {
-      font-size: 12px;
-      gap: 8px;
-    }
-
-    .privacy input[type='checkbox'] {
-      width: 16px;
-      height: 16px;
-    }
-
-    .actions {
-      justify-content: flex-end;
-      margin-top: 1rem;
-    }
-
-    .btn-send {
-      padding: 8px 16px;
-      font-size: 13px;
+      font-size: 16px;
     }
 
     .arrow-up-mobile-container {

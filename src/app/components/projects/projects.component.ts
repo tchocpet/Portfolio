@@ -18,19 +18,19 @@ export class ProjectsComponent {
       description:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       tech: ['TypeScript', 'HTML', 'CSS', 'Firebase'],
-      image: '/images/project_1.png',
+      image: '/images/project_1.webp',
       github: 'https://github.com/MaikeFriz/Join.git',
       liveTest: 'https://joind.netlify.app/',
     },
     {
       id: 'project_2',
-      title: 'Timer-tracker',
+      title: 'Pokedex',
       description:
-        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      tech: ['React', 'JavaScript', 'HTML', 'CSS', 'node.js', 'Express', 'MongoDB'],
-      image: '/images/project_2.png',
-      github: 'https://github.com',
-      liveTest: 'https://sadakka.netlify.app/login',
+        'An interactive Pokédex application that uses API data to display Pokémon, including their stats, types, and images.',
+      tech: ['JavaScript', 'HTML', 'CSS'],
+      image: '/images/project_2.jpeg',
+      github: 'https://github.com/tchocpet/Pokedex',
+      liveTest: 'https://pokedexxnew.netlify.app/',
     },
     {
       id: 'project_3',
@@ -38,7 +38,7 @@ export class ProjectsComponent {
       description:
         'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco also to defeat against the crazy hen.',
       tech: ['JavaScript', 'HTML', 'CSS'],
-      image: '/images/project_3.png',
+      image: '/images/project_3.webp',
       github: 'https://github.com/tchocpet/EL-POLLO-LOCCO.git',
       liveTest: 'https://el-pollo-locco.netlify.app',
     },
