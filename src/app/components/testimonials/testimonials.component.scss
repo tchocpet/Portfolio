@@ -4,7 +4,7 @@
 
   &__title {
     color: #e15544;
-    font-size: 1rem;
+    font-size: 1.6rem;
     margin-bottom: 24px;
   }
 
@@ -24,17 +24,32 @@
     display: flex;
     gap: 24px;
     width: 100%;
+    font-size: 1.3rem;
   }
 
   .testimonial {
     flex: 1 1 280px;
     color: #02f4bf;
     padding: 24px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 1px solid #02f4bf;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+  .testimonial:hover {
+    transform: translateY(-4px);
+    transition: all 0.3s ease;
+    border-color: #e15544;
   }
 
   .arrow-down-desk {
     position: relative;
     top: -17px;
+  }
+  .testimonial__name {
+    font-size: 1.4rem;
   }
 }
 
@@ -45,6 +60,10 @@
       flex-direction: row;
       align-items: stretch;
       min-width: 0;
+
+      max-width: 360px;
+
+      border: 1px solid #02f4bf;
     }
 
     &__viewport {
