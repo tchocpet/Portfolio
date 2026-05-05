@@ -60,7 +60,7 @@
       flex-direction: row;
       align-items: stretch;
       min-width: 0;
-
+      flex: 0 0 calc(100vw - 48px);
       max-width: 360px;
 
       border: 1px solid #02f4bf;
