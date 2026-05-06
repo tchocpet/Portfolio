@@ -1,6 +1,5 @@
 .testimonials {
   padding: 24px 0 32px;
-  font-size: 1rem;
 
   &__title {
     color: #e15544;
@@ -18,13 +17,13 @@
     flex: 1;
     width: 100%;
     overflow: hidden;
+    order: 2;
   }
 
   &__track {
     display: flex;
     gap: 24px;
     width: 100%;
-    font-size: 1.3rem;
   }
 
   .testimonial {
@@ -38,32 +37,64 @@
     background: rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
   }
+
   .testimonial:hover {
     transform: translateY(-4px);
     transition: all 0.3s ease;
     border-color: #e15544;
   }
 
+  .testimonial__name {
+    color: #e15544;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .testimonial__project,
+  .testimonial__quote {
+    color: #02f4bf;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .testimonial__project {
+    margin-bottom: 12px;
+  }
+
+  .testimonial__quote {
+    font-family: 'Courier New', monospace;
+    background: transparent;
+    margin: 0;
+  }
+
   .arrow-down-desk {
+    rotate: -60deg;
+    height: 100px;
+    width: 40px;
+    flex-shrink: 0;
+    color: #e15544;
+    margin: 1rem 0 0 1rem;
+    order: 1;
     position: relative;
     top: -17px;
-  }
-  .testimonial__name {
-    font-size: 1.4rem;
   }
 }
 
 @media (max-width: 768px) {
   .testimonials {
+    padding: 1.5rem 0 2rem;
+
+    &__title {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
     &__list {
       gap: 16px;
       flex-direction: row;
       align-items: stretch;
       min-width: 0;
-      flex: 0 0 calc(100vw - 48px);
-      max-width: 360px;
-
-      border: 1px solid #02f4bf;
     }
 
     &__viewport {
@@ -71,7 +102,10 @@
       overflow-y: hidden;
       -webkit-overflow-scrolling: touch;
       scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
       position: relative;
+      width: 100%;
+      flex: 1;
     }
 
     &__viewport::after {
@@ -93,7 +127,21 @@
     .testimonial {
       flex: 0 0 calc(100vw - 48px);
       max-width: 360px;
+      padding: 16px;
       scroll-snap-align: center;
+    }
+
+    .testimonial__name {
+      font-size: 1.1rem;
+    }
+
+    .testimonial__project,
+    .testimonial__quote {
+      font-size: 1rem;
+    }
+
+    .arrow-down-desk {
+      display: none;
     }
   }
 }

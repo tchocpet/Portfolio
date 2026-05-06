@@ -16,41 +16,35 @@ html {
   scroll-padding-top: var(--app-header-height);
 }
 
-/* Root */
 :root {
   --app-header-height: 92px;
 }
 
-/* RESET */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* BODY */
 body {
   margin: 0;
   width: 100%;
   min-height: 100%;
   overflow-x: hidden;
-
   font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  line-height: 1.5;
   color-scheme: dark;
   color: var(--mat-sys-on-surface);
-  font: var(--mat-sys-body-medium);
-
   background-image: linear-gradient(to bottom, #0b042d, #1f0880, #0b042f, #241085);
   background-size: 100% 300vh;
 }
 
-/* MAIN */
 main {
   width: 100%;
   min-height: 75vh;
 }
 
-/* CONTAINER */
 .app-container {
   width: 100%;
   max-width: 1600px;
@@ -58,12 +52,10 @@ main {
   padding: 0 24px;
 }
 
-/* SECTION */
 .section {
   padding: 40px 0;
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
   .app-container {
     max-width: 100%;
