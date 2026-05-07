@@ -87,7 +87,7 @@
                   {{
                     contactForm.get('email')?.hasError('required')
                       ? ('contact.errors.emailRequired' | translate)
-                      : 'Bitte gültige E-Mail eingeben'
+                      : ('contact.emailInvalid' | translate)
                   }}
                 </span>
                 <span class="checkmark exclamation">!</span>
@@ -143,7 +143,19 @@
 
         <div class="actions">
           <div class="server-message">
-            {{ serverMessage }}
+            <span
+              class="server-message__text server-message__text--error"
+              *ngIf="contactForm.get('privacy')?.invalid && contactForm.get('privacy')?.touched"
+            >
+              {{ 'contact.privacyRequired' | translate }}
+            </span>
+
+            <span
+              class="server-message__text server-message__text--success"
+              *ngIf="serverMessage && contactForm.get('privacy')?.valid"
+            >
+              {{ serverMessage }}
+            </span>
           </div>
 
           <button type="submit" class="btn-send" [disabled]="!contactForm.valid || sending">

@@ -61,6 +61,8 @@ const TRANSLATIONS = {
       message: 'Message',
       send: 'Send',
       sending: 'Sending...',
+      privacyRequired: 'Please accept the privacy policy.',
+      emailInvalid: 'Please enter a valid email address',
       placeholder: {
         name: 'Your Name',
         email: 'Your Email',
@@ -134,15 +136,24 @@ const TRANSLATIONS = {
     },
     privacy: {
       title: 'Privacy Policy',
+
       description:
         'This privacy policy explains how personal data is processed when you contact me through this portfolio.',
 
       controllerTitle: 'Data Controller',
+
       controller:
         'Thierno Mamadou Oury Diallo, Gußstahlstraße 45, 44793 Bochum, Germany, Email: thiernomam78@gmail.com',
 
       dataTitle: 'Collected Data',
+
       data: 'When you contact me via the contact form, your name, email address, and message will be stored. This data is used solely to respond to your inquiry and will not be shared with third parties.',
+
+      usage:
+        'Your personal data will only be used for communication purposes related to this portfolio and possible collaboration opportunities.',
+
+      rights:
+        'If you have any questions regarding your personal data, you can contact me at any time via email.',
 
       updated: 'Last updated: 26 December 2025',
     },
@@ -207,13 +218,16 @@ const TRANSLATIONS = {
       message: 'Nachricht',
       send: 'Senden',
       sending: 'Senden...',
+      privacyRequired: 'Bitte akzeptiere die Datenschutzerklärung.',
+      emailInvalid: 'Bitte gültige E-Mail eingeben',
+
       placeholder: {
         name: 'Ihr Name',
         email: 'Ihre E-Mail',
         message: 'Ihre Nachricht',
       },
       description:
-        'Ermutigen Sie Personen, Sie zu kontaktieren, und beschreiben Sie, für welche Rolle Sie sich interessieren. Bekunden Sie Ihr Interesse, zu einem neuen Projekt beizutragen.',
+        'Kontaktieren Sie mich gerne, wenn Sie einen motivierten Entwickler suchen oder gemeinsam ein neues Projekt starten möchten. Ich interessiere mich für Junior- oder Einstiegspositionen, insbesondere im Bereich Webentwicklung, in denen ich mich einbringen, lernen und weiterentwickeln kann. Ich bin stets offen für neue Herausforderungen und freue mich darauf, Teil innovativer Projekte zu sein.',
       meta: {
         emailLabel: 'E-Mail:',
         phoneLabel: 'Tel:',
@@ -255,7 +269,7 @@ const TRANSLATIONS = {
       subtitle: 'frontend developer',
       legal: 'Rechtlicher Hinweis',
       privacy: 'Datenschutzerklärung',
-      copyright: '© 2025 Thierno Diallo. Alle Rechte vorbehalten.',
+      copyright: '© 2026 Thierno Diallo. Alle Rechte vorbehalten.',
     },
     legal: {
       title: 'Rechtlicher Hinweis',
@@ -273,20 +287,32 @@ const TRANSLATIONS = {
       disclaimerTitle: 'Haftungsausschluss ',
       disclaimer:
         'Die Inhalte dieses Portfolios wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte wird jedoch keine Gewähr übernommen. Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG bin ich jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.',
-      date: 'Datum: 26. December 2025',
+      date: 'Datum: 7. Mai 2026',
     },
     privacy: {
       title: 'Datenschutzerklärung',
+
       description:
         'Diese Datenschutzerklärung informiert darüber, wie personenbezogene Daten im Rahmen dieses Portfolios verarbeitet werden.',
 
       controllerTitle: 'Verantwortlicher',
+
       controller:
         'Thierno Mamadou Oury Diallo, Gußstahlstraße 45, 44793 Bochum, Deutschland, E-Mail: thiernomam78@gmail.com',
+
       dataTitle: 'Erhebung und Verarbeitung personenbezogener Daten',
+
       data: 'Wenn Sie über das Kontaktformular mit mir in Verbindung treten, werden Ihr Name, Ihre E-Mail-Adresse sowie Ihre Nachricht gespeichert. Diese Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben.',
-      updated: 'Zuletzt aktualisiert: 26. December2025',
+
+      usage:
+        'Ihre personenbezogenen Daten werden ausschließlich für Kommunikationszwecke im Zusammenhang mit diesem Portfolio und möglichen Zusammenarbeitsmöglichkeiten verwendet.',
+
+      rights:
+        'Wenn Sie Fragen zu Ihren personenbezogenen Daten haben, können Sie mich jederzeit per E-Mail kontaktieren.',
+
+      updated: 'Zuletzt aktualisiert: 7. Mai 2026',
     },
+
     herocontact: {
       contact: 'Kontakt',
     },

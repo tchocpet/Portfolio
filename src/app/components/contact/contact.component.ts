@@ -87,7 +87,7 @@ export class ContactComponent implements OnInit {
 
           setTimeout(() => {
             this.serverMessage = '';
-          }, 3000);
+          }, 4000);
         },
         () => {
           this.sending = false;
@@ -95,7 +95,7 @@ export class ContactComponent implements OnInit {
 
           setTimeout(() => {
             this.serverMessage = '';
-          }, 3000);
+          }, 4000);
         },
       );
   }

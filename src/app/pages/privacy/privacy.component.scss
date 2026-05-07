@@ -1,36 +1,59 @@
 .privacy {
   color: #02f4bf;
-  min-height: calc(100vh - 460px);
-  padding: 3rem;
-  display: flex;
-  align-items: center;
-  margin: 15px;
+
+  padding: 6rem 0 2rem;
 }
 
 .privacy .container {
-  max-width: 900px;
+  width: 100%;
+  max-width: 1650px;
+  margin: 0 auto;
+  padding: 0 32px;
 }
 
 .privacy h1 {
   color: #e15544;
   font-size: 2rem;
-  margin: 0 0 1rem;
+  margin: 0 0 1.5rem;
 }
 
 .privacy h3 {
   color: #e15544;
-  font-size: 2rem;
-  margin: 1.5rem 0 0.5rem;
+  font-size: 1.25rem;
+  margin: 2rem 0 0.75rem;
 }
 
 .privacy p {
-  font-size: 2rem;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 1.7;
   margin: 0 0 1rem;
 }
 
 .privacy .muted {
   color: rgba(255, 255, 255, 0.4);
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-size: 1rem;
+}
+@media (max-width: 768px) {
+  .privacy {
+    min-height: auto;
+    padding: 5rem 0 2rem;
+    margin: 0;
+  }
+
+  .privacy .container {
+    padding: 0 16px;
+  }
+
+  .privacy h1 {
+    font-size: 1.6rem;
+  }
+
+  .privacy h3 {
+    font-size: 1rem;
+  }
+
+  .privacy p {
+    font-size: 1.1rem;
+  }
 }

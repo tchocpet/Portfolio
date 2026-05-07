@@ -23,7 +23,11 @@ export class App implements OnInit {
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: 'auto' });
+
+        setTimeout(() => {
+          AOS.refreshHard();
+        }, 300);
       });
 
       setTimeout(() => {
@@ -33,7 +37,7 @@ export class App implements OnInit {
           offset: 100,
         });
 
-        AOS.refresh();
+        AOS.refreshHard();
       }, 100);
     }
   }

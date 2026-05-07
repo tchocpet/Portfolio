@@ -1,32 +1,27 @@
 .app-toolbar {
-  /* make background configurable; default transparent */
   background: var(--app-toolbar-bg, transparent) !important;
   color: var(--app-toolbar-color, #ffffff);
   backdrop-filter: blur(10px);
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   width: 100%;
   height: 92px;
   z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .toolbar-container {
+  width: 100%;
+  max-width: 1650px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  height: 100%;
-  padding: 0 5rem;
-  position: relative;
-
-  @media (max-width: 768px) {
-    padding: 0 1rem;
-  }
 }
 
 .logo {
@@ -35,18 +30,12 @@
   color: #e15544;
   text-decoration: none;
   cursor: pointer;
-  transition: color 0.3s ease;
   white-space: nowrap;
-  height: 44px;
-  width: 92px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-shrink: 0;
-}
 
-.logo:hover {
-  color: #e15544;
+  &:hover {
+    color: #e15544;
+  }
 }
 
 .nav {
@@ -54,25 +43,15 @@
   gap: 1.5rem;
   align-items: center;
   flex: 1;
-  justify-content: left;
+  justify-content: flex-start;
   margin-left: 2rem;
-
-  &--desktop {
-    @media (max-width: 768px) {
-      display: none;
-    }
-  }
-}
-
-button {
-  color: #e15544;
 }
 
 .nav a {
   color: #e15544;
   text-decoration: none;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   transition: color 0.3s ease;
 
   &:hover {
@@ -84,24 +63,6 @@ button {
   display: flex;
   align-items: center;
   gap: 0.25rem;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-}
-
-.lang-btn {
-  color: #e15544 !important;
-  font-weight: 700;
-  font-size: 1rem;
-
-  &:hover {
-    color: #02f4bf !important;
-  }
-}
-
-.mat-mdc-button:not(:disabled) {
-  color: #e15544;
 }
 
 .lang-option {
@@ -111,14 +72,15 @@ button {
   color: #e15544;
   font-weight: 700;
   font-size: 1rem;
+
+  &:hover,
+  &.active {
+    color: #02f4bf;
+  }
 }
 
-.lang-option:hover {
-  color: #02f4bf;
-}
-
-.lang-option.active {
-  color: #02f4bf;
+.mat-mdc-button:not(:disabled) {
+  color: #e15544;
 }
 
 .sep {
@@ -128,20 +90,15 @@ button {
   font-weight: 700;
 }
 
-/* Hamburger menu (mobile only) */
 .hamburger {
   display: none;
   flex-direction: column;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 8px;
+  padding: 10px;
   gap: 5px;
   margin-left: auto;
-
-  @media (max-width: 768px) {
-    display: flex;
-  }
 
   span {
     width: 24px;
@@ -164,7 +121,6 @@ button {
   }
 }
 
-/* Mobile menu drawer */
 .mobile-menu {
   display: none;
   position: fixed;
@@ -183,22 +139,6 @@ button {
 
   &.open {
     display: flex;
-  }
-}
-
-.close-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  color: #e15544;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: #02f4bf;
   }
 }
 
@@ -223,10 +163,6 @@ button {
   padding-top: 1rem;
   border-top: 1px solid rgba(0, 242, 208, 0.2);
 
-  @media (max-width: 768px) {
-    display: flex;
-  }
-
   button {
     background: none;
     border: none;
@@ -234,12 +170,8 @@ button {
     cursor: pointer;
     font-weight: 700;
     font-size: 1rem;
-    transition: color 0.3s ease;
 
-    &:hover {
-      color: #02f4bf;
-    }
-
+    &:hover,
     &.active {
       color: #02f4bf;
     }
@@ -251,23 +183,21 @@ button {
   }
 }
 
-/* Mobile-specific fixes: avoid horizontal overflow from centered toolbar and ensure menu sits under header */
 @media (max-width: 768px) {
-  .app-toolbar {
-    left: 0;
-    transform: none;
-    width: 100%;
+  .toolbar-container {
+    padding: 0 16px;
   }
 
-  .mobile-menu {
-    top: var(--app-header-height, 92px);
-    left: 0;
-    right: 0;
-    width: 100%;
+  .nav,
+  .language-toggle {
+    display: none;
   }
 
   .hamburger {
-    /* larger hit area on mobile */
-    padding: 10px;
+    display: flex;
+  }
+
+  .mobile-lang-toggle {
+    display: flex;
   }
 }
