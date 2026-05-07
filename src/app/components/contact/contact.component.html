@@ -145,15 +145,17 @@
           <div class="server-message">
             <span
               class="server-message__text server-message__text--error"
-              *ngIf="contactForm.get('privacy')?.invalid && contactForm.get('privacy')?.touched"
+              *ngIf="
+                contactForm.get('name')?.valid &&
+                contactForm.get('email')?.valid &&
+                contactForm.get('message')?.valid &&
+                contactForm.get('privacy')?.invalid
+              "
             >
               {{ 'contact.privacyRequired' | translate }}
             </span>
 
-            <span
-              class="server-message__text server-message__text--success"
-              *ngIf="serverMessage && contactForm.get('privacy')?.valid"
-            >
+            <span class="server-message__text server-message__text--success" *ngIf="serverMessage">
               {{ serverMessage }}
             </span>
           </div>

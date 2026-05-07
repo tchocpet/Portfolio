@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, NgZone } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   FormsModule,
@@ -32,12 +32,14 @@ export class ContactComponent implements OnInit {
   sending = false;
   serverMessage = '';
 
+  private messageTimeout?: ReturnType<typeof setTimeout>;
+
   constructor(
     private fb: FormBuilder,
     private translationService: TranslationService,
+    private cdr: ChangeDetectorRef,
+    private ngZone: NgZone,
   ) {
-    // Initialize EmailJS with your Public Key
-    // Get your Public Key from: https://dashboard.emailjs.com/admin/account
     emailjs.init('y18Jul5fp_HBY-um3');
   }
 
@@ -57,6 +59,19 @@ export class ContactComponent implements OnInit {
     });
   }
 
+  private clearServerMessageAfterDelay(): void {
+    if (this.messageTimeout) {
+      clearTimeout(this.messageTimeout);
+    }
+
+    this.messageTimeout = setTimeout(() => {
+      this.ngZone.run(() => {
+        this.serverMessage = '';
+        this.cdr.detectChanges();
+      });
+    }, 3000);
+  }
+
   onSubmit(): void {
     this.contactForm.markAllAsTouched();
 
@@ -64,7 +79,9 @@ export class ContactComponent implements OnInit {
     const email = this.contactForm.value.email?.trim();
     const message = this.contactForm.value.message?.trim();
 
-    if (!this.contactForm.valid || !name || !email || !message) return;
+    if (!this.contactForm.valid || !name || !email || !message) {
+      return;
+    }
 
     this.sending = true;
     this.serverMessage = '';
@@ -81,21 +98,26 @@ export class ContactComponent implements OnInit {
         () => {
           this.sending = false;
           this.serverMessage = this.translationService.getTranslation('contact.success');
-          this.contactForm.reset({ privacy: false });
+
+          this.contactForm.reset({
+            name: '',
+            email: '',
+            message: '',
+            privacy: false,
+          });
+
           this.contactForm.markAsPristine();
           this.contactForm.markAsUntouched();
 
-          setTimeout(() => {
-            this.serverMessage = '';
-          }, 4000);
+          this.cdr.detectChanges();
+          this.clearServerMessageAfterDelay();
         },
         () => {
           this.sending = false;
           this.serverMessage = this.translationService.getTranslation('contact.failure');
 
-          setTimeout(() => {
-            this.serverMessage = '';
-          }, 4000);
+          this.cdr.detectChanges();
+          this.clearServerMessageAfterDelay();
         },
       );
   }

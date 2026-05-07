@@ -1,7 +1,8 @@
 .footer {
   width: 100%;
   margin-top: auto;
-  padding: 3rem 2rem;
+  padding: 3.5rem 0 2rem;
+  margin: 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.03);
   background: transparent;
 }
@@ -19,12 +20,12 @@
 }
 
 .footer__left {
-  flex: 0 0 25%;
+  flex: 1;
 }
 
 .logo {
   color: #e15544;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: 2px;
 }
@@ -100,7 +101,7 @@
 
 @media (max-width: 768px) {
   .footer {
-    padding: 1rem 0;
+    padding: 3rem 0 1.5rem;
   }
 
   .footer__inner {
