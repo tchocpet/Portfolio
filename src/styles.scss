@@ -26,23 +26,28 @@ html {
   box-sizing: border-box;
 }
 
+html,
 body {
-  margin: 0;
   width: 100%;
   min-height: 100%;
+  margin: 0;
   overflow-x: hidden;
+}
+
+body {
   font-family: 'Roboto Mono', monospace;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.3;
   color-scheme: dark;
   color: var(--mat-sys-on-surface);
   background-image: linear-gradient(to bottom, #0b042d, #1f0880, #0b042f, #241085);
   background-size: 100% 300vh;
 }
 
-main {
-  width: 100%;
-  min-height: 75vh;
+app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .app-container {
@@ -56,6 +61,11 @@ main {
   padding: 40px 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 @media (max-width: 768px) {
   .app-container {
     max-width: 100%;
@@ -64,14 +74,5 @@ main {
 
   .section {
     padding: 24px 0;
-  }
-
-  main {
-    min-height: auto;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
   }
 }

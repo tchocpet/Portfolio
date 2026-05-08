@@ -51,7 +51,7 @@ export class ContactComponent implements OnInit {
         [
           Validators.required,
           Validators.email,
-          Validators.pattern(/^[^\s@]{2,}@[^\s@]+\.[^\s@]{2,}$/),
+          Validators.pattern(/^[^\s@]{2,}@[^\s@]+\.(de|com|net|org|io|dev|at|ch|fr|es|it|nl)$/i),
         ],
       ],
       message: ['', [Validators.required, Validators.pattern(/\S+/)]],

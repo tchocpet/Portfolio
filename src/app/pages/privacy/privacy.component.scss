@@ -1,7 +1,7 @@
 .privacy {
   width: 100%;
   min-height: auto;
-  padding: 140px 0 80px;
+  padding: 110px 0 0;
   overflow: visible;
   box-sizing: border-box;
 }
@@ -22,14 +22,14 @@ h1 {
 
 h3 {
   color: #02f4bf;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
 p {
   color: #ffffff;
-  line-height: 1.7;
+  line-height: 1.9;
   margin-bottom: 1rem;
   max-width: 1000px;
 }
@@ -41,7 +41,7 @@ p {
 
 @media (max-width: 768px) {
   .privacy {
-    padding: 120px 0 60px;
+    padding: 110px 0 10px;
   }
 
   .container {
@@ -49,14 +49,14 @@ p {
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 }
